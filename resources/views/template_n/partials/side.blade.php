@@ -170,13 +170,13 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
               
-                  <p class="centered"><a href="profile.html"> <class="img-circle" width="60"></a></p>
+                  <p class="centered"><a href="profile.html"> <class="img-circle" width="60"><img src="{{ URL::to('/') }}/images_n/users/1.png" class="img-circle" width="60" /> </a></p>
                   <h5 class="centered">{{ Auth::user()->name  }}</h5>
                   
                   <li class="mt">
-                      <a class="active" href="index.html">
+                      <a class="active" href="#">
                           <i class="fa fa-dashboard"></i>
-                          <span>Dashboard</span>
+                          <span>Mi Aula Virtual</span>
                       </a>
                   </li>
 
@@ -196,7 +196,7 @@
                       </ul>
                   </li>
 
-                  <li class="sub-menu">
+                  <!--li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="fa fa-cogs"></i>
                           <span>Components</span>
@@ -246,7 +246,7 @@
                           <li><a  href="morris.html">Morris</a></li>
                           <li><a  href="chartjs.html">Chartjs</a></li>
                       </ul>
-                  </li>
+                  </li-->
 
               </ul>
               <!-- sidebar menu end-->
@@ -281,7 +281,7 @@
        
                   <div class="col-lg-3 ds">
                     <!--COMPLETED ACTIONS DONUTS CHART-->
-            <h3>NOTIFICATIONS</h3>
+            <h3>Mensajes de Alumnos</h3>
                                         
                       <!-- First Action -->
                       <div class="desc">

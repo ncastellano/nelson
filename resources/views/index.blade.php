@@ -1,21 +1,26 @@
 @extends('template_n.main')
 
 @section('title')
-Inicio
+Admin
 @endsection
-
 @section('content')
-<h1>hola esta es mi pagina</h1>
+ 
+<center>
 <p>
-	
-hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-
+	Bienvenido al Aula Virtual del Colegio <br/>
 </p>
+<h3>San Nicolas Diacono</h3>
 
-<div class="btn btn-default">Dame click</div>
 
-<a href="" class="btn btn-success">boton bootstrap</a>
 
+<img src="{{ URL::to('/') }}/images_n/logo.jpg" class="" width="120" /> 
+
+<br/>
+<div class="btn btn-default">Ver Informes</div>
+
+<a href="" class="btn btn-success">Ver asignaturas</a>
+
+</center>
 @endsection
 
 @section('javascript')

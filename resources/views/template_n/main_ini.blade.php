@@ -41,7 +41,7 @@
 <body class="cover">
 
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-default navbar-static-top" style="background-color: #00809d">
             <div class="container">
                 <div class="navbar-header">
 
@@ -52,11 +52,13 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-
+<img src="{{ URL::to('/') }}/images_n/pizarra.jpg" class="" width="50" style="margin-top:10px " />
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        Aula Virtual
+                    <a class="navbar-brand" href="{{ url('/') }}" style="color: white">
+
+                       Aula Virtual
                     </a>
+                    
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
@@ -69,8 +71,8 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li><a href="{{ route('login') }}">Ingresar</a></li>
-                            <li><a href="{{ route('register') }}">Registrar</a></li>
+                            <li><a href="{{ route('login') }}" style="color: white">Ingresar</a></li>
+                            <li><a href="{{ route('register') }}" style="color: white">Registrar</a></li>
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
