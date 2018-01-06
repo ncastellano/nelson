@@ -53,6 +53,9 @@ Auth::routes();
         });  
 
 	Route::resource('categorias', 'CategoriasController');
+	Route::resource('asignaturas', 'AsignaturaController');
+	Route::resource('cursos', 'CursosController');
+
 	Route::get('categorias/{id}/destroy',[
             'uses'  =>  'CategoriasController@destroy',
             'as'    =>   'categorias.destroy' 

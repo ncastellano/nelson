@@ -9,26 +9,26 @@
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
               </div>
             <!--logo start-->
-            <a href="index.html" class="logo"><b>Aula Virtual</b></a>
+            <a href="#" class="logo"><b>Aula Virtual</b></a>
             <!--logo end-->
             <div class="nav notify-row" id="top_menu">
                 <!--  notification start -->
                 <ul class="nav top-menu">
                     <!-- settings start -->
                     <li class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <i class="fa fa-tasks"></i>
                             <span class="badge bg-theme">4</span>
                         </a>
                         <ul class="dropdown-menu extended tasks-bar">
                             <div class="notify-arrow notify-arrow-green"></div>
                             <li>
-                                <p class="green">You have 4 pending tasks</p>
+                                <p class="green">Tienes 4 Tareas Pendientes</p>
                             </li>
                             <li>
                                 <a href="index.html#">
                                     <div class="task-info">
-                                        <div class="desc">DashGum Admin Panel</div>
+                                        <div class="desc">Trabajos Proyecto 1</div>
                                         <div class="percent">40%</div>
                                     </div>
                                     <div class="progress progress-striped">
@@ -41,7 +41,7 @@
                             <li>
                                 <a href="index.html#">
                                     <div class="task-info">
-                                        <div class="desc">Database Update</div>
+                                        <div class="desc">Ejercicios Matematica</div>
                                         <div class="percent">60%</div>
                                     </div>
                                     <div class="progress progress-striped">
@@ -54,7 +54,7 @@
                             <li>
                                 <a href="index.html#">
                                     <div class="task-info">
-                                        <div class="desc">Product Development</div>
+                                        <div class="desc">Tareas Recibidas</div>
                                         <div class="percent">80%</div>
                                     </div>
                                     <div class="progress progress-striped">
@@ -67,7 +67,7 @@
                             <li>
                                 <a href="index.html#">
                                     <div class="task-info">
-                                        <div class="desc">Payments Sent</div>
+                                        <div class="desc">Proyectos Recibidos</div>
                                         <div class="percent">70%</div>
                                     </div>
                                     <div class="progress progress-striped">
@@ -78,7 +78,7 @@
                                 </a>
                             </li>
                             <li class="external">
-                                <a href="#">See All Tasks</a>
+                                <a href="#">Ver Todas Las tareas</a>
                             </li>
                         </ul>
                     </li>
@@ -92,58 +92,50 @@
                         <ul class="dropdown-menu extended inbox">
                             <div class="notify-arrow notify-arrow-green"></div>
                             <li>
-                                <p class="green">You have 5 new messages</p>
+                                <p class="green">Tienes 5 Nuevos Mensajes</p>
                             </li>
                             <li>
                                 <a href="index.html#">
                                     <span class="photo"><img alt="avatar" src="{{ asset('plantilla/Theme/assets/img/ui-zac.jpg')}}"></span>
                                     <span class="subject">
-                                    <span class="from">Zac Snider</span>
-                                    <span class="time">Just now</span>
+                                    <span class="from">Alumno Carlos Vegas</span>
+                                    <span class="time">10 Min</span>
                                     </span>
-                                    <span class="message">
-                                        Hi mate, how is everything?
-                                    </span>
+                                    
                                 </a>
                             </li>
                             <li>
                                 <a href="index.html#">
                                     <span class="photo"><img alt="avatar" src="{{ asset('plantilla/Theme/assets/img/ui-divya.jpg')}}"></span>
                                     <span class="subject">
-                                    <span class="from">Divya Manian</span>
+                                    <span class="from">Alum Maria Rodriguez</span>
                                     <span class="time">40 mins.</span>
                                     </span>
-                                    <span class="message">
-                                     Hi, I need your help with this.
-                                    </span>
+                                    
                                 </a>
                             </li>
                             <li>
                                 <a href="index.html#">
                                     <span class="photo"><img alt="avatar" src="{{ asset('plantilla/Theme/assets/img/ui-danro.jpg')}}"></span>
                                     <span class="subject">
-                                    <span class="from">Dan Rogers</span>
+                                    <span class="from">Alumno Gustavo Rojas</span>
                                     <span class="time">2 hrs.</span>
                                     </span>
-                                    <span class="message">
-                                        Love your new Dashboard.
-                                    </span>
+                                    
                                 </a>
                             </li>
                             <li>
                                 <a href="index.html#">
                                     <span class="photo"><img alt="avatar" src="{{ asset('plantilla/Theme/assets/img/ui-sherman.jpg')}}"></span>
                                     <span class="subject">
-                                    <span class="from">Dj Sherman</span>
+                                    <span class="from">Claudia Hernandez</span>
                                     <span class="time">4 hrs.</span>
                                     </span>
-                                    <span class="message">
-                                        Please, answer asap.
-                                    </span>
+                                    
                                 </a>
                             </li>
                             <li>
-                                <a href="index.html#">See all messages</a>
+                                <a href="#">Ver Todos Los Mensajes</a>
                             </li>
                         </ul>
                     </li>
@@ -151,12 +143,43 @@
                 </ul>
                 <!--  notification end -->
             </div>
-            <div class="top-menu">
-              <ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="" method="POST">
-                                            
-                                                     </li>
-              </ul>
+            <div class="collapse navbar-collapse" id="app-navbar-collapse">
+             <ul class="nav navbar-nav">
+                        &nbsp;
+                    </ul>
+
+                    <!-- Right Side Of Navbar -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <!-- Authentication Links -->
+                        @if (Auth::guest())
+                            <li><a href="{{ route('login') }}">Login</a></li>
+                            <li><a href="{{ route('register') }}">Register</a></li>
+                        @else
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
+                       
+                                </ul>
+                            </li>
+                        @endif
+                        
+                   <a href="profile.html"> <class="img-circle" width="60"><img src="{{ URL::to('/') }}/images_n/users/1.png" class="img-circle" width="60" /> </a>
+                
+                    </ul>
             </div>
         </header>
       <!--header end-->
@@ -290,7 +313,7 @@
                         </div>
                         <div class="details">
                           <p><muted>2 Minutes Ago</muted><br/>
-                             <a href="#">James Brown</a> subscribed to your newsletter.<br/>
+                             <a href="#">Jaime Martinez</a> Comentó Foro.<br/>
                           </p>
                         </div>
                       </div>
@@ -301,7 +324,7 @@
                         </div>
                         <div class="details">
                           <p><muted>3 Hours Ago</muted><br/>
-                             <a href="#">Diana Kennedy</a> purchased a year subscription.<br/>
+                             <a href="#">Diana Kennedy</a> Comentó Foro.<br/>
                           </p>
                         </div>
                       </div>
@@ -312,7 +335,7 @@
                         </div>
                         <div class="details">
                           <p><muted>7 Hours Ago</muted><br/>
-                             <a href="#">Brandon Page</a> purchased a year subscription.<br/>
+                             <a href="#">Belkis rodriguez</a> Comentó Foro.<br/>
                           </p>
                         </div>
                       </div>
@@ -323,7 +346,7 @@
                         </div>
                         <div class="details">
                           <p><muted>11 Hours Ago</muted><br/>
-                             <a href="#">Mark Twain</a> commented your post.<br/>
+                             <a href="#">Mark Twain</a> Comentó Foro.<br/>
                           </p>
                         </div>
                       </div>
@@ -334,68 +357,13 @@
                         </div>
                         <div class="details">
                           <p><muted>18 Hours Ago</muted><br/>
-                             <a href="#">Daniel Pratt</a> purchased a wallet in your store.<br/>
+                             <a href="#">Daniel Pratt</a> Comentó Foro.<br/>
                           </p>
                         </div>
                       </div>
 
                        <!-- USERS ONLINE SECTION -->
-            <h3>TEAM MEMBERS</h3>
-                      <!-- First Member -->
-                      <div class="desc">
-                        <div class="thumb">
-                          <img class="img-circle" src="assets/img/ui-divya.jpg" width="35px" height="35px" align="">
-                        </div>
-                        <div class="details">
-                          <p><a href="#">DIVYA MANIAN</a><br/>
-                             <muted>Available</muted>
-                          </p>
-                        </div>
-                      </div>
-                      <!-- Second Member -->
-                      <div class="desc">
-                        <div class="thumb">
-                          <img class="img-circle" src="assets/img/ui-sherman.jpg" width="35px" height="35px" align="">
-                        </div>
-                        <div class="details">
-                          <p><a href="#">DJ SHERMAN</a><br/>
-                             <muted>I am Busy</muted>
-                          </p>
-                        </div>
-                      </div>
-                      <!-- Third Member -->
-                      <div class="desc">
-                        <div class="thumb">
-                          <img class="img-circle" src="assets/img/ui-danro.jpg" width="35px" height="35px" align="">
-                        </div>
-                        <div class="details">
-                          <p><a href="#">DAN ROGERS</a><br/>
-                             <muted>Available</muted>
-                          </p>
-                        </div>
-                      </div>
-                      <!-- Fourth Member -->
-                      <div class="desc">
-                        <div class="thumb">
-                          <img class="img-circle" src="assets/img/ui-zac.jpg" width="35px" height="35px" align="">
-                        </div>
-                        <div class="details">
-                          <p><a href="#">Zac Sniders</a><br/>
-                             <muted>Available</muted>
-                          </p>
-                        </div>
-                      </div>
-                      <!-- Fifth Member -->
-                      <div class="desc">
-                        <div class="thumb">
-                          <img class="img-circle" src="assets/img/ui-sam.jpg" width="35px" height="35px" align="">
-                        </div>
-                        <div class="details">
-                          <p><a href="#">Marcel Newman</a><br/>
-                             <muted>Available</muted>
-                          </p>
-                        </div>
-                      </div>
+           
 
                         <!-- CALENDAR-->
                         <div id="calendar" class="mb">
@@ -420,7 +388,7 @@
       <!--footer start-->
       <footer class="site-footer">
           <div class="text-center">
-              2014 - Alvarez.is
+              2018 - Desarrollo
               <a href="index.html#" class="go-top">
                   <i class="fa fa-angle-up"></i>
               </a>
